@@ -37,6 +37,11 @@ function chooseID(chosenID){
           demoDisplay.append("p").text(`${data[0]}: ${data[1]}`)
        });
 
+       
+    // BAR CHART
+ 
+    // Filter sample data for chosenID
+    sampleID = data.samples.filter(data => +(data.id) == chosenID); 
       
        
     })}; 
