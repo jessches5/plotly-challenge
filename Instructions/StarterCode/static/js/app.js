@@ -1,11 +1,16 @@
 // Create a function for the dropdown menu
-function chooseID(chosenID) {
+function chooseID(chosenID){
+
+    // Print ID in dropdown
     console.log(chosenID);
-
+ 
+    // Load the json data
     d3.json("./samples.json").then((data) => {
-        console.log(data);
-    });
 
-    // Promise Pending
-    const dataPromise = d3.json("./samples.json");
-    console.log("Data Promise: ", dataPromise);};
+    // Print the json data
+    console.log(data);
+ 
+    // Clear the dropdown menu
+    d3.select("#selDataset").html("");   
+    
+    })}; 
