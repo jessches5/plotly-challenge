@@ -1,3 +1,4 @@
-samples = d3.json("./samples.json");
-    // Print the tvData
-  console.log(samples);
+// Create a function for the dropdown menu
+function chooseID(chosenID) {
+    console.log(chosenID);
+}
