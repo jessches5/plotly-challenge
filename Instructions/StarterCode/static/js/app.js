@@ -13,4 +13,12 @@ function chooseID(chosenID){
     // Clear the dropdown menu
     d3.select("#selDataset").html("");   
     
+    // Append IDs to the metadata array
+    data.metadata.forEach(mData => {
+        
+        d3.select("#selDataset").append("option").attr("value", mData.id).text(mData.id);
+        });
+        console.log(item.id);
+    
+    d3.select("#selDataset").value = chosenID;
     })}; 
