@@ -75,4 +75,7 @@ function chooseID(chosenID){
            color: 'light blue'
          }
         }]
+
+    // Plot the bar chart
+    Plotly.newPlot('bar', trace, {responsive: true});     
     })}; 
