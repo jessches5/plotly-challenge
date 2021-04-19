@@ -78,4 +78,9 @@ function chooseID(chosenID){
 
     // Plot the bar chart
     Plotly.newPlot('bar', trace, {responsive: true});     
+
+// BUBBLE CHART
+ 
+ var bubbleValue =sampleID[0].sample_values;
+ var bubbleOtuID= sampleID[0].otu_ids; 
     })}; 
