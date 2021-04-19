@@ -62,4 +62,17 @@ function chooseID(chosenID){
     
     // Print yAxis
     console.log(yAxis);
+
+    
+    // Set trace for bar chart
+    var trace = [{
+        y: yAxis,
+        x: sampleValues,
+        type: 'bar',
+        orientation: "h",
+        text:  otuLabels,
+        marker: {
+           color: 'light blue'
+         }
+        }]
     })}; 
