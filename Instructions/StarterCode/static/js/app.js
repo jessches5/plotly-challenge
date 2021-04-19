@@ -23,12 +23,12 @@ function chooseID(chosenID){
     d3.select("#selDataset").value = chosenID;
 
     // Filter Metadata for chosen ID from dropdown
-    mID = data.metadata.filter(data=> (data.id === chosenID));
+    var mID = data.metadata.filter(data=> (data.id === chosenID));
        
     // Print the metadata ID
     console.log(mID);
 
-    demoDisplay = d3.select("#sample-metadata");
+    var demoDisplay = d3.select("#sample-metadata");
 
     // Clear Display
     demoDisplay.html("");
@@ -41,9 +41,17 @@ function chooseID(chosenID){
     // BAR CHART
  
     // Filter sample data for chosenID
-    sampleID = data.samples.filter(data => +(data.id) == chosenID); 
+    var sampleID = data.samples.filter(data => +(data.id) == chosenID); 
       
     // Print sample_value
     console.log(sampleID[0].sample_values);  
+
+   // Top 10 Values
+   var sampleValues = sampleID[0].sample_values.slice(0,10);
+   sampleValues= sampleValues.reverse();
+   var otuIDs = sampleID[0].otu_ids.slice(0,10);
+   otuIDs = otuIDs.reverse();
+   var otuLabels = sampleID[0].otu_labels
+   otuLabels = otuLabels.reverse(); 
    
     })}; 
