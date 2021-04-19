@@ -54,4 +54,7 @@ function chooseID(chosenID){
    var otuLabels = sampleID[0].otu_labels
    otuLabels = otuLabels.reverse(); 
    
+   // Print sample_value
+    console.log(sampleValues);
+
     })}; 
