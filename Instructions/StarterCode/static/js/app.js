@@ -95,4 +95,11 @@ marker: {
 }
 }]
 
+// Set layout for bubble chart
+layout = {
+    xaxis: {title: 'OTU ID'},
+    height: 750,
+    width: 1500
+    };
+    
     })};
