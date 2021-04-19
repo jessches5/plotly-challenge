@@ -57,4 +57,8 @@ function chooseID(chosenID){
    // Print sample_value
     console.log(sampleValues);
 
+    // Set yAxis
+    var yAxis = otuIDs.map(data => 'OTU' + " " + data);
+    
+    
     })}; 
