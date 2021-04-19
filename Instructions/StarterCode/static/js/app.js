@@ -38,49 +38,61 @@ function chooseID(chosenID){
        });
 
 
-    // BAR CHART
- 
-    // Filter sample data for chosenID
-    var sampleID = data.samples.filter(data => +(data.id) == chosenID); 
-      
-    // Print sample_value
-    console.log(sampleID[0].sample_values);  
+// BAR CHART
 
-   // Top 10 Values
-   var sampleValues = sampleID[0].sample_values.slice(0,10);
-   sampleValues= sampleValues.reverse();
-   var otuIDs = sampleID[0].otu_ids.slice(0,10);
-   otuIDs = otuIDs.reverse();
-   var otuLabels = sampleID[0].otu_labels
-   otuLabels = otuLabels.reverse(); 
-   
-   // Print sample_value
-    console.log(sampleValues);
-
-    // Set yAxis
-    var yAxis = otuIDs.map(data => 'OTU' + " " + data);
+// Filter sample data for chosenID
+var sampleID = data.samples.filter(data => +(data.id) == chosenID); 
     
-    // Print yAxis
-    console.log(yAxis);
+// Print sample_value
+console.log(sampleID[0].sample_values);  
 
-    
-    // Set trace for bar chart
-    var trace = [{
-        y: yAxis,
-        x: sampleValues,
-        type: 'bar',
-        orientation: "h",
-        text:  otuLabels,
-        marker: {
-           color: 'light blue'
-         }
-        }]
+// Top 10 Values
+var sampleValues = sampleID[0].sample_values.slice(0,10);
+sampleValues= sampleValues.reverse();
+var otuIDs = sampleID[0].otu_ids.slice(0,10);
+otuIDs = otuIDs.reverse();
+var otuLabels = sampleID[0].otu_labels
+otuLabels = otuLabels.reverse(); 
 
-    // Plot the bar chart
-    Plotly.newPlot('bar', trace, {responsive: true});     
+// Print sample_value
+console.log(sampleValues);
+
+// Set yAxis
+var yAxis = otuIDs.map(data => 'OTU' + " " + data);
+
+// Print yAxis
+console.log(yAxis);
+
+
+// Set trace for bar chart
+var trace = [{
+    y: yAxis,
+    x: sampleValues,
+    type: 'bar',
+    orientation: "h",
+    text:  otuLabels,
+    marker: {
+        color: 'light blue'
+        }
+    }]
+
+// Plot the bar chart
+Plotly.newPlot('bar', trace, {responsive: true});     
 
 // BUBBLE CHART
  
  var bubbleValue =sampleID[0].sample_values;
  var bubbleOtuID= sampleID[0].otu_ids; 
-    })}; 
+
+// Set trace for bubble chart
+bubbleTrace = [{
+x: bubbleOtuID,
+y: bubbleValue,
+marker: {
+    color: bubbleOtuID,
+    
+    size: bubbleValue
+}
+}]
+
+    })};
