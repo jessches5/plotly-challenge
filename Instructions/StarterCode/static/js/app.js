@@ -101,5 +101,9 @@ layout = {
     height: 750,
     width: 1500
     };
-    
-    })};
+
+// Plot the bubble chart
+Plotly.newPlot('bubble', bubbleTrace, layout);
+ 
+});
+}
