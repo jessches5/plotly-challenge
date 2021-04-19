@@ -60,5 +60,6 @@ function chooseID(chosenID){
     // Set yAxis
     var yAxis = otuIDs.map(data => 'OTU' + " " + data);
     
-    
+    // Print yAxis
+    console.log(yAxis);
     })}; 
