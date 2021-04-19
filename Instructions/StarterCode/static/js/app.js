@@ -88,6 +88,7 @@ Plotly.newPlot('bar', trace, {responsive: true});
 bubbleTrace = [{
 x: bubbleOtuID,
 y: bubbleValue,
+mode: 'markers',
 marker: {
     color: bubbleOtuID,
     
@@ -107,3 +108,12 @@ Plotly.newPlot('bubble', bubbleTrace, layout);
  
 });
 }
+
+// Set ID to display
+chooseID(940);
+
+// Set the on change function
+d3.select("#selDataset").on('change',() => {
+    chooseID(d3.event.target.value);
+    
+    });
